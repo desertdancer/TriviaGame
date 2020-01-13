@@ -1,0 +1,28 @@
+body{
+
+    font-size: 25px;
+}
+.container{
+    margin-top: 50px;
+    border: wheat;
+    border-style: solid;
+    height: 500px;
+}
+
+#game{
+
+    background-color: red;
+    color: white;
+    font-size: 30px;
+}
+
+#done{
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+}
+
+#questions{
+    background-color: gainsboro;
+}
