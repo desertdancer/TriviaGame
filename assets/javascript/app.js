@@ -1,25 +1,23 @@
 $(document).ready(function () {
-    var result = ["true", "false", "true", "false", "true"]
+    var result = ["false", "true", "false", "true", "true", "true"]
     var counter = 60
     var timer;
     var correct = 0
     var incorrect = 0
     var unanswered = 0
+	
     $("#questions").hide()
     $("#results").hide()
 
     $("#game").on("click", function () {
-
         console.log("start")
-
         $("#start").hide()
         $("#questions").show()
-        // start the timer
+        				// start the timer
         timer = setInterval(countdown, 1000)
 
         function countdown() {
             counter--
-            //counter = counter - 1
             $("#countdownTimer").text(counter)
             if (counter === 0) {
                 console.log("time out")
@@ -27,24 +25,19 @@ $(document).ready(function () {
                 // go to results
             }
         }
-
+		
         $("#done").on("click", function () {
             console.log("DONE")
-            // stop the timer
-            // get the responses
-            // hide the questions 
-            // show the results
+            clearTimeout(timer);
             results()
-
-
         })
 
         function results() {
             console.log("RESULTS")
             clearInterval(timer)
 
-
-            var input = $("#questions").children("input:checked")
+            input = $("input[name]:checked");                          // right
+            // var input = $("#questions").children("input:checked")   // no...
             console.log(input)
         
             for (var i = 0; i < input.length; i++) {
@@ -53,13 +46,14 @@ $(document).ready(function () {
                 console.log("-->", name, val)
                 if (result[name - 1 ] === val){
                     correct++
-                }else{
+                } else{
                     incorrect++
                 }
             }
 
-            unanswered = 5 - correct - incorrect
+            unanswered = 6 - correct - incorrect
             console.log(correct, incorrect, unanswered)
+			
             $("#questions").hide()
             $("#correct").text(correct)
             $("#incorrect").text(incorrect)
@@ -67,6 +61,4 @@ $(document).ready(function () {
             $("#results").show()
         }
     })
-
-
 })

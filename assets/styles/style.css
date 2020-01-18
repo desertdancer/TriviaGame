@@ -1,0 +1,67 @@
+.body {
+    font-size: 20px;
+  }
+  
+  .container {
+      text-align: center;
+      margin-top: 30px;
+      border-style: solid;
+      height: 850px;
+  
+      background: #faf0e5;
+      color: rgb(219, 150, 22);
+      font-weight: bold;
+  
+  
+      background-image: url("../../images/BullockHotel.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+  
+  #title {
+      color: rgb(219, 150, 22);
+      font-size: 24px;
+      padding: 30px;
+  }
+  
+  .image-container-seth {
+      display: block;
+      margin-top: 20px;
+      align-self: right;
+      border: 1px solid rgb(355, 0, 0);
+      border: 1px solid rgba(355, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+  }
+  
+  #game {
+      background-color: #52310f;
+      color: white;
+      font-size: 25px;
+  }
+  
+  
+  
+  
+  #done {
+      margin-top: 25px;
+      background-color: #52310f;
+      color: white;
+  }
+  
+  #questions{
+      font-size: 20px;
+      font-weight: bold;
+      color: rgb(219, 150, 22);
+      /* color: #52310f; */
+      /* color: #d47d26; */
+  }
+  
+  #results {
+      font-size: 25px;
+      font-weight: bold;
+      color: rgb(219, 150, 22);
+      /* color: #d47d26; */
+  }

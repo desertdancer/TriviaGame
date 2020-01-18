@@ -6,84 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Trivia Game</title>
 </head>
 
-
 <body>
-    <div class="container">
+  <div class="container">
     <div id="start">
-        <h1>Totally Trivia!</h1>
-        <button id="game">start</button>
-    </div>
-
-
+      <h1>Totally Deadwood Trivia!</h1>
+      <button id="game">Start</button>
+    </div>  <!-- end of start -->
 
     <div id="questions">
-        <h1>Totally Trivia!</h1>
-        <h2>time: <span id="countdownTimer"></span> seconds </h2><br>
+	  <div id="title">
+        <h1>Totally Deadwood Trivia!</h1>
+        <h2>Time: <span id="countdownTimer"></span> seconds </h2><br>
+	  </div>  <!-- end of title -->
+	  
+	  <div id=image-container-seth>
+		  <img class="image-seth" src="images/Seth_Bullock_Moustache.jpg" style="float:right" alt="">
+	  </div>  <!-- end of image-container-seth-->
+	
+      <div id="question_1">
+        <p>1. Seth Bullock was the first Sheriff of Deadwood, ND.</p>
+        <label type="radio-inline"><input type="radio" value="true" name="1">True</input>
+        <label type="radio-inline"><input type="radio" value="false" name="1">False</input><input type="radio" value="true" name="1"> True</input>
+         
+      </div>  
+	
+      
+      <div  id="question_2">
+        <p>2. Seth and President Teddy Roosevelt were best friends.</p> 
+        <label type="radio-inline"><input type="radio" value="true" name="2">True</input>
+        <label type="radio-inline"><input type="radio" value="false" name="2">False</input>
+      </div>  
+	
+      <div id="question_3">
+        <p>3. Wild Bill Hickock was killed at Saloon No. 10 by Sheriff Seth Bullock.</p>
+        <label type="radio-inline"><input type="radio" value="true" name="3">True</input>
+        <label type="radio-inline"><input type="radio" value="false" name="3">False</input>
+      </div>  
+	
+      <div id="question_4">
+        <p>4. Sheriff Bullock is buried in Deadwood's Boot Hill.</p>
+        <label type="radio-inline"><input type="radio" value="true" name="4">True</input>
+        <label type="radio-inline"><input type="radio" value="false" name="4">False</input>
+      </div>  
+  
+      <div id="question_5">
+        <p>5. Tourists visit the Bullock Hotel to commune with Seth's ghost.</p>
+        <label type="radio-inline"><input type="radio" value="true" name="5">True</input>
+        <label type="radio-inline"><input type="radio" value="false" name="25">False</input>
+      </div> 
 
 
-        <p>
-            I like pizza </p>
-        <input type="radio" value="true" name="1"> true</input>
-        <input type="radio" value="false" name="1">false</input>
+      <div id="question_6">
+        <p>6. Unsolved Mysteries did a segment on Seth's appearances in the hotel he built.</p>
+        <label type="radio-inline"><input type="radio" value="true" name="6">True</input>
+        <label type="radio-inline"><input type="radio" value="false" name="6">False</input>
+      </div>  
 
-
-        <p>
-            q2. placeholder question 2</p>
-        <input type="radio" value="true" name="2"> true
-        <input type="radio" value="false" name="2">false
-
-
-
-        <p>
-            q3. Placeholder question 3 </p>
-        <input type="radio" value="true" name="3"> true
-        <input type="radio" value="false" name="3">false
-
-
-
-        <p>
-            q4. placeholder question 4</p>
-        <input type="radio" value="true" name="4"> true
-        <input type="radio" value="false" name="4">false
-
-
-        <p>
-            q5. placeholder question 5 </p>
-        <input type="radio" value="true" name="5"> true
-        <input type="radio" value="false" name="5">false
-<br>
-        <button id="done">done</button>
-    </div>
-
-
+      <div>
+        <br>
+        <button id="done">DONE</button>
+      </div>
+    </div>  <!-- end of questions -->
 
     <div id="results">
-        <h1>Totally Trivia!</h1>
+      <h1>Totally Deadwood Trivia!</h1>
+      <p>Correct: <span id="correct">0</span></p>
+      <p>Incorrect: <span id="incorrect">0</span></p>
+      <p>Not Anwered: <span id="notanswered">0</span></p>
 
-        <p>Correct: <span id="correct">0</span></p>
-        <p>Incorrect: <span id="incorrect">0</span></p>
-        <p>Not Anwered: <span id="notanswered">0</span></p>
+      <div id=image-container-seth>
+        <img class="image-seth" src="images/Seth_Bullock_Moustache.jpg" style="float:right" alt="">
+      </div>  <!-- end of image-container-seth-->
+  
+    </div>  <!-- end of results -->
+  </div>  
 
-    </div>
-
-</div>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="./assets/javascript/app.js"></script>
+  <script src="./assets/javascript/app.js"></script>
 </body>
 
 </html>
